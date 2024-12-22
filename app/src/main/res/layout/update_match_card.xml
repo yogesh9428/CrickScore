@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="6dp"
+    android:backgroundTint="@android:color/white"
+    android:clipToPadding="false"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Series name with ellipsis -->
+        <TextView
+            android:id="@+id/seriesName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Series Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Match details (e.g., match name and venue) with ellipsis -->
+        <TextView
+            android:id="@+id/matchDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Match, Venue"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginBottom="8dp"
+            android:scrollHorizontally="false" />
+
+        <!-- Team 1 layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Team 1 full name -->
+            <TextView
+                android:id="@+id/team1_fullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Team A Full Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Team 2 layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <!-- Team 2 full name -->
+            <TextView
+                android:id="@+id/team2_fullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Team B Full Name"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Match Start Date -->
+        <TextView
+            android:id="@+id/matchStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Date: 01 Jan 2025"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

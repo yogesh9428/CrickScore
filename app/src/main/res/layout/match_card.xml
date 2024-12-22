@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="6dp"
+    android:backgroundTint="@android:color/white"
+    android:clipToPadding="false"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Series name with ellipsis -->
+        <TextView
+            android:id="@+id/seriesName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:scrollHorizontally="false"
+            android:text="Series Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Match details (e.g., match name and venue) with ellipsis -->
+        <TextView
+            android:id="@+id/matchDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Match, Venue"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginBottom="8dp"
+            android:scrollHorizontally="false" />
+
+        <!-- Team 1 layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Team 1 name -->
+            <TextView
+                android:id="@+id/team1Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Team A"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Team 1 score -->
+            <TextView
+                android:id="@+id/team1Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/0 (0.0 overs)"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Team 2 layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <!-- Team 2 name -->
+            <TextView
+                android:id="@+id/team2Name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Team B"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Team 2 score -->
+            <TextView
+                android:id="@+id/team2Score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0/0 (0.0 overs)"
+                android:textSize="14sp"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+
+        <!-- Optional Match Status -->
+        <TextView
+            android:id="@+id/matchStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LIVE"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
